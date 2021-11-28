@@ -59,9 +59,9 @@ public class Runner {
    }
 
    private static void printPurchases(Purchase[]purchases){
-         System.out.println("Constants -  Name: " + Purchase.NAME + "; Price: " + Converter.convert(Purchase.PRICE));
+         System.out.printf("Constants - Name:%s; Price:%s %n",Purchase.NAME, Convert.convert(Purchase.PRICE));
          for (Purchase purchase : purchases) {
-            System.out.println("Amount:" + purchase.getAmount() + "; Discount:" + purchase.getDiscount() + "; Week day:" + purchase.getWeekDay());
+            System.out.printf("Amount:%d; Discount:%f; Week day:%s %n",purchase.getAmount(), purchase.getDiscount(), purchase.getWeekDay());
          }
          System.out.println();
    }
