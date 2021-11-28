@@ -40,7 +40,7 @@ public class Runner {
          }
          //вывод результатов пункта 4
          System.out.printf("Mean cost: %.3f %n", meanCost);
-         System.out.println("Total cost of all purchases on Monday: " + Convert.convert(totalCostMonday));
+         System.out.println("Total cost of all purchases on Monday: " + Converter.convert(totalCostMonday));
          System.out.println("The day with maximum purchase cost: " + maxCostDay);
          System.out.println();
          Arrays.sort(purchases);
@@ -59,7 +59,7 @@ public class Runner {
    }
 
    private static void printPurchases(Purchase[]purchases){
-         System.out.println("Constants -  Name: " + Purchase.NAME + "; Price: " + Convert.convert(Purchase.PRICE));
+         System.out.println("Constants -  Name: " + Purchase.NAME + "; Price: " + Converter.convert(Purchase.PRICE));
          for (Purchase purchase : purchases) {
             System.out.println("Amount:" + purchase.getAmount() + "; Discount:" + purchase.getDiscount() + "; Week day:" + purchase.getWeekDay());
          }
