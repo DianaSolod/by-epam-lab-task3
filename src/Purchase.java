@@ -48,7 +48,7 @@ public class Purchase  implements Comparable<Purchase>{
 
    @Override
     public String toString(){
-        return NAME + ";" + Converter.convert(PRICE) + ";" + amount + ";" + discount + ";" + weekDay + ";" + Converter.convert(getCost());
+        return String.format("%s;%s;%d;%f;%s;%s;", NAME, Convert.convert(PRICE), amount, discount, weekDay, Convert.convert(getCost()));
     }
 
     @Override
