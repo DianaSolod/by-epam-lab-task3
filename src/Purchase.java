@@ -52,10 +52,9 @@ public class Purchase  implements Comparable<Purchase>{
         return NAME + ";" + Converter.convert(PRICE) + ";" + amount + ";" + discount + ";" + weekDay + ";" + Converter.convert(getCost());
     }
 
+    @Override
     public int compareTo(Purchase purchase) {
         return amount - purchase.amount;
     }
-
-
 }
 
