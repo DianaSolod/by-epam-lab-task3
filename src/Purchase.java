@@ -46,13 +46,11 @@ public class Purchase  implements Comparable<Purchase>{
         return Math.round(PRICE * amount * (100 - discount) / 100);
     }
 
-    
    @Override
     public String toString(){
         return NAME + ";" + Converter.convert(PRICE) + ";" + amount + ";" + discount + ";" + weekDay + ";" + Converter.convert(getCost());
     }
 
-    
     @Override
     public int compareTo(Purchase purchase) {
         return amount - purchase.amount;
