@@ -12,24 +12,24 @@ public class Runner {
          Purchase[] purchases;
          final int PURCHASES_NUMBER = sc.nextInt();
          purchases = new Purchase[PURCHASES_NUMBER];
-         //инициализация массива из файла в цикле со счетчиком
-	     for (int i = 0; i < PURCHASES_NUMBER; i++){
+	 for (int i = 0; i < PURCHASES_NUMBER; i++){
             purchases[i] = new Purchase();
             purchases[i].setAmount(sc.nextInt());
             purchases[i].setDiscount(sc.nextInt());
             purchases[i].setWeekDay(WeekDay.values()[sc.nextInt()]);
          }
          printPurchases(purchases);
-         int totalCost = 0;		//инициализация финансовых величин
+         int totalCost = 0;		
          int totalCostMonday = 0;
          int maxCost = 0;
-         double meanCost = 0.0;	//среднее - это статистическая, а не финансовая величина!
+         double meanCost = 0.0;
          WeekDay maxCostDay = null;
-         //обработка массива (пункт 4) в цикле for-each (без счетчика)
          for (Purchase purchase : purchases){
             totalCost += purchase.getCost();
-            if (purchase.getWeekDay() == WeekDay.MONDAY) totalCostMonday += purchase.getCost();
-            if (purchase.getCost() > maxCost) {
+            if (purchase.getWeekDay() == WeekDay.MONDAY){
+		    totalCostMonday += purchase.getCost();
+	    }
+            if (purchase.getCost() > maxCost){
                maxCost = purchase.getCost();
                maxCostDay = purchase.getWeekDay();
             }
